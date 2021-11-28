@@ -3,17 +3,19 @@
     margin: 0;
 }
 
-header {
-    background-color: greenyellow;
+body {
+    background-color: #202020;
+    color: #eeeeee;
 }
 
-.headerFlex {
+header {
+    background-color: darkslategray;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     padding: 20px 0 20px 0;
 }
+
 header img {
-    
     border: 5px solid black;
 }
