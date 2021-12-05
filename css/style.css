@@ -11,6 +11,15 @@ body {
     color: #eeeeee;
 }
 
+header {
+    /* background-color: darkslategray; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3vw 5vw;
+    letter-spacing: 0.1vw;
+}
+
 h1 {
     font-size: 2.4vw;
 }
@@ -19,26 +28,29 @@ a {
     /* background-color: darkblue; */
     color: #eeeeee;
     text-decoration: none;
-    margin-bottom: -1px;
-}
-
-
-/* Slide in */
-
-a {
-    overflow: hidden;
-    display: block;
+    /* Slide in */
     position: relative;
-    padding: 0.2em 0;
     transition: color 0.3s;
 }
 
-#anton {
-    transition: color 0.3s;
+.yellow {
+    color: #ffa800;
+}
+
+.white {
+    color: #eee;
+}
+
+.no {
+    height: 2vw;
 }
 
 a.no:hover #anton {
     color: #ffa800;
+}
+
+#anton {
+    transition: color 0.3s;
 }
 
 .dot {
@@ -53,21 +65,29 @@ a.no::after {
     display: none;
 }
 
+.antonxu {
+    display: block;
+    transform: translateY(-2vw);
+}
+
+.dot {
+    /* position: relative; */
+    /* transform: translateY(-0.2vw); */
+    font-size: 4vw;
+}
+
 a::after {
     content: "";
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: 0%;
     height: 0.1vw;
     background-color: #ffa800;
-    transition: opacity 300ms, transform 300ms;
-    opacity: 1;
-    transform: translate3d(-100%, 0, 0);
+    transition: width 300ms;
 }
 
 a.selected::after {
-    overflow: hidden;
     display: block;
     position: absolute;
     bottom: 0;
@@ -75,47 +95,17 @@ a.selected::after {
     width: 100%;
     height: 0.1vw;
     background-color: #ffa800;
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
 }
 
 a:hover::after,
 a:focus::after {
-    transform: translate3d(0, 0, 0);
-}
-
-header {
-    /* background-color: darkslategray; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 3vw 5vw;
-    letter-spacing: 0.1vw;
+    width: 100%;
 }
 
 header div.flexItem {
     /* background-color: aquamarine; */
     height: 2vw;
     transition-duration: 0.3s;
-}
-
-.antonxu {
-    /* background-color: brown; */
-    height: 2vw;
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    overflow: hidden;
-}
-
-.yellow {
-    color: #ffa800;
-}
-
-.dot {
-    position: relative;
-    transform: translateY(-0.7vw);
-    font-size: 4vw;
 }
 
 header div.flex {
