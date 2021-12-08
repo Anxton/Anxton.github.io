@@ -12,7 +12,6 @@ body {
 }
 
 header {
-    /* background-color: darkslategray; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,16 +20,7 @@ header {
 }
 
 h1 {
-    font-size: 2.4vw;
-}
-
-a {
-    /* background-color: darkblue; */
-    color: #eeeeee;
-    text-decoration: none;
-    /* Slide in */
-    position: relative;
-    transition: color 0.3s;
+    font-size: 2vw;
 }
 
 .yellow {
@@ -41,71 +31,55 @@ a {
     color: #eee;
 }
 
+a {
+    color: #eeeeee;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s;
+}
+
 .no {
     height: 2vw;
 }
 
-a.no:hover #anton {
-    color: #ffa800;
-}
-
-#anton {
-    transition: color 0.3s;
-}
-
-.dot {
-    transition: color 0.3s;
-}
-
-a.no:hover .dot {
-    color: #eee;
-}
-
-a.no::after {
-    display: none;
-}
-
 .antonxu {
+    font-size: 2.4vw;
     display: block;
     transform: translateY(-2vw);
 }
 
 .dot {
-    /* position: relative; */
-    /* transform: translateY(-0.2vw); */
     font-size: 4vw;
+}
+
+.antonxu, .dot {
+    transition: color 0.3s;
+}
+
+.no:hover .antonxu {
+    color: #ffa800;
+}
+.no:hover .dot {
+    color: #eee;
 }
 
 a::after {
     content: "";
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: -0.2vw;
     width: 0%;
-    height: 0.1vw;
+    height: 1px;
     background-color: #ffa800;
     transition: width 300ms;
 }
 
-a.selected::after {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 0.1vw;
-    background-color: #ffa800;
+.no::after {
+    display: none;
 }
 
 a:hover::after,
-a:focus::after {
+a.selected::after {
     width: 100%;
-}
-
-header div.flexItem {
-    /* background-color: aquamarine; */
-    height: 2vw;
-    transition-duration: 0.3s;
 }
 
 header div.flex {
