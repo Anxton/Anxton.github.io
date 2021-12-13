@@ -11,81 +11,88 @@ body {
     color: #eeeeee;
 }
 
-header {
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 3vw 5vw;
+    padding: 2vw 5vw;
     letter-spacing: 0.1vw;
 }
 
-h1 {
+nav span {
     font-size: 2vw;
+    font-weight: bold;
 }
 
-.yellow {
-    color: #ffa800;
-}
-
-.white {
-    color: #eee;
-}
-
-a {
+nav a {
     color: #eeeeee;
     text-decoration: none;
     position: relative;
     transition: color 0.3s;
 }
 
-.no {
+nav .yellow {
+    color: #ffa800;
+}
+
+nav .white {
+    color: #eee;
+}
+
+nav a.no {
     height: 2vw;
 }
 
-.antonxu {
+nav .antonxu {
     font-size: 2.4vw;
     display: block;
     transform: translateY(-2vw);
 }
 
-.dot {
+nav .dot {
     font-size: 4vw;
 }
 
-.antonxu, .dot {
+nav .antonxu,
+nav .dot {
     transition: color 0.3s;
 }
 
-.no:hover .antonxu {
+nav .no:hover .antonxu {
     color: #ffa800;
 }
-.no:hover .dot {
+
+nav .no:hover .dot {
     color: #eee;
 }
 
-a::after {
+nav a::after {
     content: "";
     position: absolute;
     bottom: -0.2vw;
+    left: 0;
     width: 0%;
     height: 1px;
     background-color: #ffa800;
     transition: width 300ms;
 }
 
-.no::after {
+nav .no::after {
     display: none;
 }
 
-a:hover::after,
-a.selected::after {
+nav a:hover::after,
+nav a.selected::after {
     width: 100%;
 }
 
-header div.flex {
-    /* background-color: green; */
+nav div {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     gap: 5vw;
+}
+
+section {
+    margin: 0 2vw;
 }
