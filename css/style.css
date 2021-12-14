@@ -11,6 +11,14 @@ body {
     color: #eeeeee;
 }
 
+.yellow {
+    color: #ffa800;
+}
+
+.white {
+    color: #eee;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -29,14 +37,6 @@ nav a {
     text-decoration: none;
     position: relative;
     transition: color 0.3s;
-}
-
-nav .yellow {
-    color: #ffa800;
-}
-
-nav .white {
-    color: #eee;
 }
 
 nav a.no {
@@ -95,4 +95,11 @@ nav div {
 
 section {
     margin: 0 2vw;
+}
+
+section div.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
 }
