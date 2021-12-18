@@ -177,13 +177,12 @@ section .projects {
     display: grid;
     gap: 2vw;
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-    grid-template-rows: auto;
+    grid-template-rows: 1fr 1fr;
 }
 
 section .projects .card {
     position: relative;
     background-color: #eee;
-    color: #202020;
     padding: 1vw;
     transition: background-color 0.3s;
 }
