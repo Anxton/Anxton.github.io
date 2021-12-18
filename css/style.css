@@ -177,23 +177,26 @@ section .projects {
     display: grid;
     gap: 2vw;
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: repeat(auto-fit, 1fr);
 }
 
 section .projects .card {
     position: relative;
     background-color: #eee;
+    color: #202020;
     padding: 1vw;
-    transition: background-color 0.3s;
+    transition: background-color 0.5s;
 }
 
 section .card h3 {
     text-align: center;
     margin-bottom: 1vw;
+    font-size: 2vw;
 }
 
 section .card p {
     text-align: justify;
+    color: #eee;
 }
 
 section .card img {
@@ -222,4 +225,27 @@ section .strengths {
     height: 100%;
     flex-flow: column nowrap;
     justify-content: space-around;
+    line-height: 2em;
+}
+
+section .strengths .competences {
+    position: relative;
+}
+
+section .competences .python {
+    position: absolute;
+    left: -5vw;
+    width: 3vw;
+}
+
+section .competences .html {
+    position: absolute;
+    left: -5vw;
+    width: 3vw;
+}
+
+section .competences .git {
+    position: absolute;
+    left: -5vw;
+    width: 3vw;
 }
