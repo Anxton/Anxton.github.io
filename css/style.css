@@ -171,7 +171,7 @@ main section .photo {
     }
 }
 
-main section .projects {
+section .projects {
     height: 90%;
     width: 90%;
     display: grid;
@@ -180,8 +180,36 @@ main section .projects {
     grid-template-rows: auto;
 }
 
-.card {
+section .projects .card {
+    position: relative;
     background-color: #eee;
+    color: #202020;
+    padding: 1vw;
+    transition: background-color 0.3s;
+}
+
+.card h3 {
+    text-align: center;
+    margin-bottom: 1vw;
+}
+
+.card p {
+    text-align: justify;
+}
+
+.card img {
+    position: absolute;
+    right: 1vw;
+    bottom: 1vw;
+}
+
+section .card:hover {
+    background-color: #353535;
+    color: #eee;
+}
+
+.card:hover img {
+    filter: invert();
 }
 
 @media screen and (min-width: 1023px) {
