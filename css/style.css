@@ -1,14 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Roboto:wght@300&display=swap');
 * {
     padding: 0;
     margin: 0;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     font-family: "Roboto", sans-serif;
-    font-size: 20px;
+    font-size: 1.15vw;
+    letter-spacing: 0.1vw;
     background-color: #202020;
     color: #eeeeee;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
 }
 
 .yellow {
@@ -24,12 +32,6 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 2vw 5vw;
-    letter-spacing: 0.1vw;
-}
-
-nav span {
-    font-size: 2vw;
-    font-weight: bold;
 }
 
 nav a {
@@ -37,6 +39,11 @@ nav a {
     text-decoration: none;
     position: relative;
     transition: color 0.3s;
+}
+
+nav span {
+    font-size: 2vw;
+    font-weight: bold;
 }
 
 nav a.no {
@@ -93,13 +100,51 @@ nav div {
     gap: 5vw;
 }
 
-section {
-    margin: 0 2vw;
+main {
+    flex: 1 0 auto;
 }
 
-section div.flex {
+main header {
+    position: relative;
+    top: -1vw;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 900;
+    font-size: 5vw;
+    color: #696969;
+    margin-left: 8vw;
+}
+
+main section {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main section div.flex {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 5vw;
+    height: 30vw;
+}
+
+main section .bar {
+    border-left: 1px solid #ffa800;
+    padding: 1vw 3vw;
+}
+
+main section h1 {
+    font-size: 2.5vw;
+}
+
+main section h2 {
+    font-family: 'Roboto Mono', monospace;
+    color: #696969;
+    font-size: 1.5vw;
+}
+
+main section .photo {
+    height: 100%;
+    width: auto;
 }
