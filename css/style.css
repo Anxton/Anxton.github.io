@@ -187,16 +187,16 @@ section .projects .card {
     transition: background-color 0.3s;
 }
 
-.card h3 {
+section .card h3 {
     text-align: center;
     margin-bottom: 1vw;
 }
 
-.card p {
+section .card p {
     text-align: justify;
 }
 
-.card img {
+section .card img {
     position: absolute;
     right: 1vw;
     bottom: 1vw;
@@ -215,4 +215,11 @@ section .card:hover {
     .p1 {
         grid-row: span 2 / auto;
     }
+}
+
+section .strengths {
+    display: flex;
+    height: 100%;
+    flex-flow: column nowrap;
+    justify-content: space-around;
 }
