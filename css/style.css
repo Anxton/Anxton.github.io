@@ -19,6 +19,12 @@ body {
     flex-flow: column nowrap;
 }
 
+@media screen and (max-width: 1022px) {
+    body {
+        font-size: 2vw;
+    }
+}
+
 .yellow {
     color: #ffa800;
 }
@@ -36,14 +42,17 @@ nav {
 
 nav a {
     color: #eeeeee;
-    text-decoration: none;
+    text-decoration-line: none;
     position: relative;
     transition: color 0.3s;
-}
-
-nav span {
     font-size: 2vw;
     font-weight: bold;
+}
+
+@media screen and (max-width: 1022px) {
+    nav a {
+        font-size: 3vw;
+    }
 }
 
 nav a.no {
@@ -101,10 +110,13 @@ nav div {
 }
 
 main {
-    flex: 1 0 auto;
+    flex: 1 0 content;
+    display: flex;
+    flex-flow: column nowrap;
 }
 
 main header {
+    flex: 0 0 auto;
     position: relative;
     top: -1vw;
     font-family: 'Roboto Mono', monospace;
@@ -115,13 +127,13 @@ main header {
 }
 
 main section {
-    height: 100%;
+    flex: 1 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-main section div.flex {
+main section .flex {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -147,4 +159,33 @@ main section h2 {
 main section .photo {
     height: 100%;
     width: auto;
+}
+
+@media screen and (max-width: 1022px) {
+    main section .flex {
+        flex-direction: column;
+    }
+    main section .photo {
+        width: 50%;
+        height: auto;
+    }
+}
+
+main section .projects {
+    height: 90%;
+    width: 90%;
+    display: grid;
+    gap: 2vw;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-template-rows: auto;
+}
+
+.card {
+    background-color: #eee;
+}
+
+@media screen and (min-width: 1023px) {
+    .p1 {
+        grid-row: span 2 / auto;
+    }
 }
