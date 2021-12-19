@@ -245,7 +245,7 @@ section a:hover {
     text-decoration: 1px underline;
 }
 
-section .strengths {
+section .column {
     display: flex;
     height: 100%;
     flex-flow: column nowrap;
@@ -253,7 +253,7 @@ section .strengths {
     line-height: 2em;
 }
 
-section .strengths .competences {
+section .column .competences {
     position: relative;
 }
 
