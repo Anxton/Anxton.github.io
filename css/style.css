@@ -336,8 +336,15 @@ section .column .contact {
     font-size: 1.2rem;
 }
 
+section .contact img {
+    width: 3vw;
+}
+
 @media screen and (max-width: 1022px) {
     section form {
         top: 5vw;
+    }
+    section .contact img {
+        width: 10vw;
     }
 }
