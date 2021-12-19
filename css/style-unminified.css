@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Roboto:wght@300&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.15vw;
+    letter-spacing: 0.1vw;
+}
+
+body {
+    background-color: #202020;
+    color: #eeeeee;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+@media screen and (max-width: 1022px) {
+    html {
+        font-size: 4vw;
+    }
+}
+
+.yellow {
+    color: #ffa800;
+}
+
+.white {
+    color: #eee;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vw 5vw;
+}
+
+nav a {
+    color: #eeeeee;
+    text-decoration-line: none;
+    position: relative;
+    transition: color 0.3s;
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+nav a.home {
+    height: 2vw;
+}
+
+nav .antonxu {
+    font-size: 2.4vw;
+    display: block;
+    transform: translateY(-2vw);
+}
+
+nav .dot {
+    font-size: 4vw;
+}
+
+nav .antonxu,
+nav .dot {
+    transition: color 0.3s;
+}
+
+nav .home:hover .antonxu {
+    color: #ffa800;
+}
+
+nav .home:hover .dot {
+    color: #eee;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    bottom: -0.2vw;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background-color: #ffa800;
+    transition: width 300ms;
+}
+
+nav .home::after {
+    display: none;
+}
+
+nav a:hover::after,
+nav a.current::after {
+    width: 100%;
+}
+
+nav div {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5vw;
+}
+
+@media screen and (max-width: 1022px) {
+    nav a {
+        font-size: 4.5vw;
+    }
+    nav .antonxu {
+        font-size: 5.5vw;
+        transform: translateY(-3.8vw);
+    }
+    nav .dot {
+        font-size: 7vw;
+    }
+}
+
+main {
+    flex: 1 0 content;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+main header {
+    flex: 0 0 auto;
+    position: relative;
+    top: -1vw;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 900;
+    font-size: 5vw;
+    color: #696969;
+    margin-left: 8vw;
+}
+
+main section {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10vw;
+}
+
+main section .bar {
+    border-left: 1px solid #ffa800;
+    padding: 1vw 3vw;
+}
+
+main section h1 {
+    font-size: 2.5rem;
+}
+
+main section h2 {
+    font-family: 'Roboto Mono', monospace;
+    color: #696969;
+    font-size: 1rem;
+}
+
+main section .photo {
+    height: 30vw;
+    width: auto;
+}
+
+@media screen and (max-width: 1022px) {
+    main header {
+        font-size: 12vw;
+        text-align: center;
+        margin-left: 0;
+    }
+    main section {
+        flex-direction: column;
+    }
+    main section .photo {
+        width: 50%;
+        height: auto;
+    }
+}
+
+section .projects {
+    height: 90%;
+    width: 90%;
+    display: grid;
+    gap: 2vw;
+    grid-template-columns: 1;
+    grid-template-rows: repeat(auto-fit, 1fr);
+}
+
+section .projects .card {
+    position: relative;
+    background-color: #eee;
+    color: #202020;
+    padding: 1vw;
+    transition: background-color 0.5s;
+    border-radius: 10px;
+}
+
+section .card h3 {
+    text-align: center;
+    margin-bottom: 1vw;
+    font-size: 2rem;
+}
+
+section .card p {
+    text-align: justify;
+    color: #eee;
+}
+
+section .card img {
+    position: absolute;
+    width: 6vw;
+    right: 1vw;
+    bottom: 1vw;
+}
+
+section .card:hover {
+    background-color: #353535;
+    color: #eee;
+}
+
+.card:hover img {
+    filter: invert();
+}
+
+@media screen and (min-width: 1023px) {
+    section .projects {
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    }
+    .p1 {
+        grid-row: span 2 / auto;
+    }
+    section .card img {
+        width: 4vw;
+    }
+}
+
+@media screen and (min-width: 1023px) {
+    main section.about {
+        align-items: baseline;
+    }
+}
+
+section a {
+    text-decoration: none;
+    color: #ffa800;
+}
+
+section a:hover {
+    text-decoration: 1px underline;
+}
+
+section .column {
+    display: flex;
+    height: 100%;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    line-height: 2rem;
+}
+
+section .column .competences {
+    position: relative;
+}
+
+section .competences img {
+    position: absolute;
+    left: -5vw;
+    width: 3vw;
+}
+
+@media screen and (max-width: 1022px) {
+    section .competences img {
+        left: -13vw;
+        width: 10vw;
+    }
+}
+
+@media screen and (min-width: 1023px) {
+    main section.contact {
+        align-items: baseline;
+    }
+}
+
+section form {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1vw;
+    width: 55%;
+    bottom: 3vw;
+}
+
+form input,
+textarea {
+    color: #eee;
+    background-color: #202020;
+    border: none;
+    border-bottom: 1px solid #eee;
+    outline-offset: 1px;
+    padding: 0.5vw;
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 0.1vw;
+    box-sizing: border-box;
+}
+
+form input:focus-visible,
+textarea:focus-visible {
+    outline: none;
+    border-bottom: 1px solid #ffa800;
+}
+
+form textarea {
+    font-size: 1rem;
+}
+
+form #submit {
+    width: 40%;
+    align-self: flex-end;
+    border: 2px solid #ffa800;
+    border-radius: 10px;
+    transition: color 0.3s;
+}
+
+form #submit:hover {
+    color: #ffa800;
+}
+
+form #submit:active {
+    border-radius: 15px;
+}
+
+section .column .contact {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+section .contact img {
+    width: 3vw;
+}
+
+section .column h3 {
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 1022px) {
+    section form {
+        top: 5vw;
+    }
+    section .contact img {
+        width: 10vw;
+    }
+}
