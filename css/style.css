@@ -49,7 +49,7 @@ nav a {
     font-weight: bold;
 }
 
-nav a.no {
+nav a.home {
     height: 2vw;
 }
 
@@ -68,11 +68,11 @@ nav .dot {
     transition: color 0.3s;
 }
 
-nav .no:hover .antonxu {
+nav .home:hover .antonxu {
     color: #ffa800;
 }
 
-nav .no:hover .dot {
+nav .home:hover .dot {
     color: #eee;
 }
 
@@ -87,7 +87,7 @@ nav a::after {
     transition: width 300ms;
 }
 
-nav .no::after {
+nav .home::after {
     display: none;
 }
 
@@ -107,7 +107,7 @@ nav div {
     nav a {
         font-size: 3vw;
     }
-    nav a.no {
+    nav a.home {
         height: 3vw;
     }
     nav .antonxu {
