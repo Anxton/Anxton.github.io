@@ -142,7 +142,7 @@ main section {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 5vw;
+    gap: 10vw;
 }
 
 main section .bar {
@@ -185,7 +185,7 @@ section .projects {
     width: 90%;
     display: grid;
     gap: 2vw;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-template-columns: 1;
     grid-template-rows: repeat(auto-fit, 1fr);
 }
 
@@ -210,6 +210,7 @@ section .card p {
 
 section .card img {
     position: absolute;
+    width: 6vw;
     right: 1vw;
     bottom: 1vw;
 }
@@ -224,8 +225,14 @@ section .card:hover {
 }
 
 @media screen and (min-width: 1023px) {
+    section .projects {
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    }
     .p1 {
         grid-row: span 2 / auto;
+    }
+    section .card img {
+        width: 4vw;
     }
 }
 
