@@ -333,11 +333,15 @@ section .column .contact {
     display: flex;
     align-items: center;
     gap: 1vw;
-    font-size: 1.2rem;
 }
 
 section .contact img {
     width: 3vw;
+}
+
+section .column h3 {
+    font-weight: normal;
+    font-size: 1.2rem;
 }
 
 @media screen and (max-width: 1022px) {
