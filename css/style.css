@@ -49,12 +49,6 @@ nav a {
     font-weight: bold;
 }
 
-@media screen and (max-width: 1022px) {
-    nav a {
-        font-size: 3vw;
-    }
-}
-
 nav a.no {
     height: 2vw;
 }
@@ -107,6 +101,22 @@ nav div {
     justify-content: flex-end;
     align-items: center;
     gap: 5vw;
+}
+
+@media screen and (max-width: 1022px) {
+    nav a {
+        font-size: 3vw;
+    }
+    nav a.no {
+        height: 3vw;
+    }
+    nav .antonxu {
+        font-size: 4vw;
+        transform: translateY(-3vw);
+    }
+    nav .dot {
+        font-size: 6vw;
+    }
 }
 
 main {
@@ -218,6 +228,15 @@ section .card:hover {
     .p1 {
         grid-row: span 2 / auto;
     }
+}
+
+section a {
+    text-decoration: none;
+    color: #ffa800;
+}
+
+section a:hover {
+    text-decoration: 1px underline;
 }
 
 section .strengths {
