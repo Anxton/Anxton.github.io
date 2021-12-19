@@ -6,12 +6,12 @@
 
 html {
     height: 100%;
-}
-
-body {
     font-family: "Roboto", sans-serif;
     font-size: 1.15vw;
     letter-spacing: 0.1vw;
+}
+
+body {
     background-color: #202020;
     color: #eeeeee;
     height: 100%;
@@ -20,8 +20,8 @@ body {
 }
 
 @media screen and (max-width: 1022px) {
-    body {
-        font-size: 2vw;
+    html {
+        font-size: 4vw;
     }
 }
 
@@ -105,17 +105,14 @@ nav div {
 
 @media screen and (max-width: 1022px) {
     nav a {
-        font-size: 3vw;
-    }
-    nav a.home {
-        height: 3vw;
+        font-size: 4.5vw;
     }
     nav .antonxu {
-        font-size: 4vw;
-        transform: translateY(-3vw);
+        font-size: 5.5vw;
+        transform: translateY(-3.8vw);
     }
     nav .dot {
-        font-size: 6vw;
+        font-size: 7vw;
     }
 }
 
@@ -151,13 +148,13 @@ main section .bar {
 }
 
 main section h1 {
-    font-size: 2.5vw;
+    font-size: 2.5rem;
 }
 
 main section h2 {
     font-family: 'Roboto Mono', monospace;
     color: #696969;
-    font-size: 1.5vw;
+    font-size: 1rem;
 }
 
 main section .photo {
@@ -167,7 +164,7 @@ main section .photo {
 
 @media screen and (max-width: 1022px) {
     main header {
-        font-size: 10vw;
+        font-size: 12vw;
         text-align: center;
         margin-left: 0;
     }
@@ -195,12 +192,13 @@ section .projects .card {
     color: #202020;
     padding: 1vw;
     transition: background-color 0.5s;
+    border-radius: 10px;
 }
 
 section .card h3 {
     text-align: center;
     margin-bottom: 1vw;
-    font-size: 2vw;
+    font-size: 2rem;
 }
 
 section .card p {
@@ -236,6 +234,12 @@ section .card:hover {
     }
 }
 
+@media screen and (min-width: 1023px) {
+    main section.about {
+        align-items: baseline;
+    }
+}
+
 section a {
     text-decoration: none;
     color: #ffa800;
@@ -250,27 +254,90 @@ section .column {
     height: 100%;
     flex-flow: column nowrap;
     justify-content: space-evenly;
-    line-height: 2em;
+    line-height: 2rem;
 }
 
 section .column .competences {
     position: relative;
 }
 
-section .competences .python {
+section .competences img {
     position: absolute;
     left: -5vw;
     width: 3vw;
 }
 
-section .competences .html {
-    position: absolute;
-    left: -5vw;
-    width: 3vw;
+@media screen and (max-width: 1022px) {
+    section .competences img {
+        left: -13vw;
+        width: 10vw;
+    }
 }
 
-section .competences .git {
-    position: absolute;
-    left: -5vw;
-    width: 3vw;
+@media screen and (min-width: 1023px) {
+    main section.contact {
+        align-items: baseline;
+    }
+}
+
+section form {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1vw;
+    width: 55%;
+    bottom: 3vw;
+}
+
+form input,
+textarea {
+    color: #eee;
+    background-color: #202020;
+    border: none;
+    border-bottom: 1px solid #eee;
+    outline-offset: 1px;
+    padding: 0.5vw;
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 0.1vw;
+    box-sizing: border-box;
+}
+
+form input:focus-visible,
+textarea:focus-visible {
+    outline: none;
+    border-bottom: 1px solid #ffa800;
+}
+
+form textarea {
+    font-size: 1rem;
+}
+
+form #submit {
+    width: 40%;
+    align-self: flex-end;
+    border: 2px solid #ffa800;
+    border-radius: 10px;
+    transition: color 0.3s;
+}
+
+form #submit:hover {
+    color: #ffa800;
+}
+
+form #submit:active {
+    border-radius: 15px;
+}
+
+section .column .contact {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 1022px) {
+    section form {
+        top: 5vw;
+    }
 }
