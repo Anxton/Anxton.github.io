@@ -4,3 +4,6 @@ https://anxton.github.io/cv/
 
 __maquettos aurelos paquetitos:__
 https://www.figma.com/file/p8I4SduhLj379h8pEUPQil/caca?node-id=17%3A9
+
+
+salut !
